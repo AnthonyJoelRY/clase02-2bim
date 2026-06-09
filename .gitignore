@@ -4,11 +4,10 @@ env/
 ENV/
 .venv
 
-# Base de datos
-bd/
-*.db
-*.sqlite
-*.sqlite3
+# Base de datos - excluir contenido de bd pero no la carpeta
+bd/*.db
+bd/*.sqlite
+bd/*.sqlite3
 
 # Caché de Python
 __pycache__/
