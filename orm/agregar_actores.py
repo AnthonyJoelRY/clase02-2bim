@@ -8,7 +8,7 @@ engine = create_engine(cadena_base_datos)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-with open("data/actores.csv", encoding="utf-8") as archivo:
+with open("../data/actores.csv", encoding="utf-8") as archivo:
     lector = csv.DictReader(archivo)
     for fila in lector:
         pais = session.query(Pais).filter(Pais.nombre.ilike(fila["pais"])).first()
